@@ -5,20 +5,24 @@ export const sidebarLinks = [
     label: "Trang chủ",
   },
   {
+    imgURL: "/assets/job.svg",
     route: "/jobs",
     label: "Việc làm",
   },
   {
+    imgURL: "/assets/user.svg",
     route: "/my-cv",
     label: "Hồ sơ CV",
   },
   {
-    route: "/company",
+    imgURL: "/assets/company.svg",
+    route: "/companies",
     label: "Công ty",
   },
   {
-    route: "/blog",
-    label: "Blog",
+    imgURL: "/assets/news.svg",
+    route: "/news",
+    label: "Tin tức",
   },
 ];
 

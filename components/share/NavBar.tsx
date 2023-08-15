@@ -5,6 +5,7 @@ import { sidebarLinks } from "../../constants";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { dark } from "@clerk/themes";
 
 function NavBar() {
   const isUserLoggedIn = true;
@@ -41,7 +42,7 @@ function NavBar() {
       <div className="flex items-center gap-1">
         <div className="block md:hidden">
           <SignedIn>
-            <SignOutButton>
+            <SignOutButton signOutCallback={() => router.push("/sign-in")}>
               <div className="flex cursor-pointer">
                 <Image
                   src="/assets/logout.svg"
@@ -56,6 +57,7 @@ function NavBar() {
 
         <OrganizationSwitcher
           appearance={{
+            baseTheme: dark,
             elements: {
               organizationSwitcherTrigger: "py-2 px-4",
             },
